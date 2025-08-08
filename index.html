@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mary Badmus - Author</title>
+  <link rel="stylesheet" href=".css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+</head>
+<body>
+  <header class="header">
+    <h1>Mary Badmus</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#books">Books</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Mary's World</h2>
+    <p>Author | Speaker | Blogger</p>
+    <button onclick="scrollToSection('books')">Explore Books</button>
+  </section>
+
+  <section id="about" class="section">
+    <h3>About the Author</h3>
+    <div class="about-container">
+      <div class="about-image">
+        <img src="Mary.jpg" alt="Jane Doe" />
+      </div>
+      <div class="about-text">
+        <p>
+          Mary Badmus is a writer, speaker, and storyteller whose soulful, practical voice inspires growth, clarity, and quiet strength.
+
+Through her books and heartfelt stories, she creates space—on page and stage—for people to reconnect with purpose and rise into their best selves.
+
+Author of three books (with a fourth on the way), her message is simple but powerful: you are capable, you are worthy, and your journey still matters.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section light">
+    <h3>Portfolio Highlights</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Keynote at The Excel Conference</h4>
+        <p>Spoke on exceeding expectations.</p>
+      </div>
+      <!-- <div class="card">
+        <h4>Literary Award 2023</h4>
+        <p>Winner of Best Fiction Book.</p>
+      </div>
+      <div class="card">
+        <h4>UN Women Collab</h4>
+        <p>Storytelling for change initiative.</p>
+      </div> -->
+    </div>
+  </section>
+
+  <section id="books" class="section">
+    <h3>Books</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Ellipsis</h4>
+        <p>A gripping story of love, choices and the supernatural.</p>
+        <button>Buy on Amazon</button>
+      </div>
+      <div class="card">
+        <h4>The Ultimate Christmas Story</h4>
+        <p>The original story of the birth of Christ made into a creative drama that boldly uses humour and colour to convey its essence.</p>
+        <button>Buy on Amazon</button>
+      </div>
+      <div class="card">
+        <h4>This Celibacy Thing</h4>
+        <p>A practical book for those wondering about Celibacy and whether or not it’s a choice they should make.</p>
+        <button>Buy on Amazon</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="section light">
+    <h3>Latest Blog Posts</h3>
+    <div id="blog-posts" class="cards"></div>
+  </section>
+
+  <section id="contact" class="section" style="text-align: center; padding: 2rem;">
+  <h3>Get in Touch</h3>
+  <div style="display: inline-block; text-align: left;">
+    <p><i class="fas fa-envelope" style="width: 20px;"></i> Email: mariebeeon@gmail.com</p>
+    <p><i class="fab fa-threads" style="width: 20px;"></i> Threads: @the_marybadmus</p>
+    <p><i class="fab fa-instagram" style="width: 20px;"></i> Instagram: @the_marybadmus</p>
+    <p><i class="fab fa-facebook" style="width: 20px;"></i> Facebook: @MaryBadmus</p>
+    <p><i class="fab fa-tiktok" style="width: 20px;"></i> TikTok: @themarybadmus</p>
+  </div>
+  <br />
+  <button style="margin-top: 1rem; padding: 0.5rem 1rem;">
+    <i class="fas fa-envelope-open-text"></i> Subscribe to Newsletter
+  </button>
+</section>
+
+  <footer class="footer">
+    &copy; 2025 Mary Badmus. All rights reserved.
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Load blog posts dynamically from JSON
+    fetch('blog-posts.json')
+      .then(response => response.json())
+      .then(posts => {
+        const blogContainer = document.getElementById('blog-posts');
+        posts.forEach(post => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <h4>${post.title}</h4>
+            <p><em>${post.date}</em> – ${post.excerpt}</p>
+          `;
+          blogContainer.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading blog posts:', error);
+      });
+  </script>
+</body>
+</html>
