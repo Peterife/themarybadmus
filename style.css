@@ -4,6 +4,8 @@
   --accent-color: #19a6b0;
   --card-bg: #1a1a1a;
   --muted-color: #aaaaaa;
+  --btn-bg: #ffffff;
+  --btn-text: #000000;
 }
 
 body.light {
@@ -12,6 +14,8 @@ body.light {
   --accent-color: #19a6b0;
   --card-bg: #f5f5f5;
   --muted-color: #555;
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
 }
 
 body {
@@ -19,6 +23,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+  scroll-behavior: smooth;
 }
 
 /* HEADER */
@@ -50,13 +55,15 @@ body {
   border-bottom: 2px solid var(--accent-color);
 }
 
-.blog-pill {
-  border: 1px solid var(--accent-color);
-  background: none;
-  color: var(--accent-color);
-  padding: 0.4rem 1rem;
+.blog-pill, .outline-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.5rem 1rem;
+  border: none;
   cursor: pointer;
   border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .theme-toggle {
@@ -65,6 +72,37 @@ body {
   color: var(--accent-color);
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 4px;
+}
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mobile-menu a {
+  display: block;
+  color: var(--text-color);
+  padding: 0.5rem 0;
+  text-decoration: none;
 }
 
 /* BIO SECTION */
@@ -95,16 +133,6 @@ body {
   line-height: 1.6;
 }
 
-.outline-btn {
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
-  background: none;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
 /* BOOKS SECTION */
 .books-section {
   padding: 2rem;
@@ -117,7 +145,7 @@ body {
 
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
@@ -135,7 +163,12 @@ body {
 
 .book-card h3 {
   margin-top: 0.5rem;
-  font-size: 1rem;
+}
+
+.book-card p {
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  margin-top: 0.5rem;
 }
 
 /* FOOTER */
@@ -162,8 +195,24 @@ body {
   filter: invert(80%);
 }
 
+/* BACK TO TOP */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  display: none;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .main-nav { display: none; }
+  .menu-toggle { display: block; }
   .bio-section { flex-direction: column; text-align: center; }
 }
