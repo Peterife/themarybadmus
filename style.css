@@ -217,3 +217,65 @@ body {
   .bio-section { flex-direction: column; text-align: center; }
 }
 
+/* CONTACT SECTION */
+.contact-section {
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  margin: 2rem;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.contact-icon {
+  margin-right: 0.5rem;
+}
+
+.contact-info a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--muted-color);
+  border-radius: 4px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.contact-form button {
+  width: 100%;
+}
+
+/* Responsive for contact section */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
