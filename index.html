@@ -1,71 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chimamanda Ngozi Adichie</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimamanda Ngozi Adichie — Demo</title>
+
+  <!-- Fonts (close to screenshot: Montserrat for UI + Lora for body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">CHIMAMANDA NGOZI ADICHIE</div>
-    <nav>
-      <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Books</a></li>
-        <li><a href="#">Media</a></li>
-        <li><a href="#">News & Events</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="actions">
-      <button class="blog-btn">IFEMELU’S BLOG</button>
-      <button id="theme-toggle" class="theme-btn">🌙</button>
-    </div>
-  </header>
+  <div class="page-shell">
 
-  <main>
-    <section class="intro">
-      <img src="https://via.placeholder.com/400x400" alt="Chimamanda Ngozi Adichie">
-      <div class="intro-text">
-        <p>
-          Chimamanda Ngozi Adichie was born in Enugu, Nigeria in 1977. She grew up on the campus of the University of Nigeria, Nsukka...
-        </p>
-        <button class="read-more">READ MORE</button>
+    <header class="site-header" role="banner">
+      <div class="logo">CHIMAMANDA NGOZI ADICHIE</div>
+
+      <nav class="main-nav" role="navigation" aria-label="Main">
+        <ul>
+          <li><a href="#" class="active"><svg viewBox="0 0 24 24" class="icon"><path d="M3 11.5L12 4l9 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Home</a></li>
+          <li><a href="#"><svg viewBox="0 0 24 24" class="icon"><path d="M3 7h18M6 7v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>About</a></li>
+          <li><a href="#"><svg viewBox="0 0 24 24" class="icon"><path d="M6 4h12v16H6z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Books</a></li>
+          <li><a href="#"><svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3 20c3-4 8-6 9-6s6 2 9 6" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>Media</a></li>
+          <li><a href="#"><svg viewBox="0 0 24 24" class="icon"><path d="M4 6h16M4 12h10M4 18h16" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>News & Events</a></li>
+          <li><a href="#"><svg viewBox="0 0 24 24" class="icon"><path d="M3 12h18" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="blog-pill" aria-label="Ifemelu's Blog">
+          <svg viewBox="0 0 24 24" class="icon-sm"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+          IFEMELU’S BLOG
+        </button>
+
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+          <svg id="theme-icon" viewBox="0 0 24 24" class="icon-sm"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
+        </button>
+
+        <!-- mobile menu toggle -->
+        <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" class="icon-sm"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+        </button>
       </div>
-    </section>
+    </header>
 
-    <section class="books">
-      <h2>Books</h2>
-      <div class="book-grid">
-        <div>
-          <img src="https://via.placeholder.com/150x220" alt="Dream Count">
-          <p>Dream Count</p>
+    <main class="site-main">
+      <!-- Intro block -->
+      <section class="intro">
+        <figure class="intro-photo" aria-hidden="false">
+          <!-- replace src with the real image -->
+          <img src="https://i.imgur.com/OtG9QeX.jpg" alt="Chimamanda Ngozi Adichie portrait">
+        </figure>
+
+        <div class="intro-copy">
+          <p class="byline">Chimamanda Ngozi Adichie</p>
+          <p class="lead">
+            Chimamanda Ngozi Adichie was born in Enugu, Nigeria in 1977. She grew up on the campus of the University of Nigeria, Nsukka...
+          </p>
+
+          <p class="excerpt">She has a Master’s Degree in Creative Writing from Johns Hopkins University and a Master of Arts degree in African Studies from Yale University. She currently lives between the United States and Nigeria.</p>
+
+          <div class="intro-actions">
+            <a class="outline-btn" href="#" role="button">READ MORE</a>
+          </div>
         </div>
-        <div>
-          <img src="https://via.placeholder.com/150x220" alt="Mama’s Sleeping Scarf">
-          <p>Mama’s Sleeping Scarf</p>
+      </section>
+
+      <!-- Books -->
+      <section class="books">
+        <h2>Books</h2>
+
+        <div class="book-row">
+          <figure>
+            <img src="https://i.imgur.com/1KegWPz.jpg" alt="Dream Count">
+            <figcaption>Dream Count</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://i.imgur.com/7Qp5w6h.jpg" alt="Mama’s Sleeping Scarf">
+            <figcaption>Mama’s Sleeping Scarf</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://i.imgur.com/6b7xDgP.jpg" alt="Notes on Grief">
+            <figcaption>Notes on Grief</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://i.imgur.com/7JZfK7v.jpg" alt="Dear Ijeawele">
+            <figcaption>Dear Ijeawele</figcaption>
+          </figure>
         </div>
-        <div>
-          <img src="https://via.placeholder.com/150x220" alt="Notes on Grief">
-          <p>Notes on Grief</p>
+
+        <div class="center-cta">
+          <a class="outline-btn" href="#">EXPLORE MORE</a>
         </div>
-        <div>
-          <img src="https://via.placeholder.com/150x220" alt="Dear Ijeawele">
-          <p>Dear Ijeawele...</p>
-        </div>
+      </section>
+
+      <!-- pale block that matches screenshot spacing -->
+      <div class="pale-band" aria-hidden="true"></div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+        <p class="site-name">CHIMAMANDA NGOZI ADICHIE</p>
+        <small>© 2025 Chimamanda Ngozi Adichie | All Rights Reserved</small>
       </div>
-      <button class="explore-more">EXPLORE MORE</button>
-    </section>
-  </main>
+    </footer>
 
-  <footer>
-    <p>CHIMAMANDA NGOZI ADICHIE</p>
-    <small>© 2025 Chimamanda Ngozi Adichie | All Rights Reserved</small>
-  </footer>
+  </div>
 
-  <script src="Mary.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
