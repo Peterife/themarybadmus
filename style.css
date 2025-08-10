@@ -39,13 +39,7 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
 }
-.main-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-.main-nav.show {
-    display: flex;
-  }
+
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -60,17 +54,7 @@ body {
 .main-nav a.active {
   border-bottom: 2px solid var(--accent-color);
 }
-@media (max-width: 768px) {
-  .main-nav {
-    display: none;
-    flex-direction: column;
-    background: var(--card-bg);
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 1rem;
-    border-radius: 8px;
-  }
+
 .blog-pill, .outline-btn {
   background-color: var(--btn-bg);
   color: var(--btn-text);
@@ -91,8 +75,13 @@ body {
 }
 
 .menu-toggle {
-    display: block;
-  }
+  display: none;
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
 /* Mobile Menu */
 .mobile-menu {
@@ -118,9 +107,12 @@ body {
 
 /* BIO SECTION */
 .bio-section {
-    flex-direction: column;
-    text-align: center;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+}
 
 .bio-img img {
   max-width: 350px;
@@ -152,9 +144,10 @@ body {
 }
 
 .books-grid {
-    grid-template-columns: 1fr;
-  }
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
 
 .book-card {
   background-color: var(--card-bg);
@@ -164,8 +157,8 @@ body {
 }
 
 .book-card img {
-    max-width: 90%;
-  }
+  max-width: 100%;
+  border-radius: 4px;
 }
 
 .book-card h3 {
@@ -223,7 +216,6 @@ body {
   .menu-toggle { display: block; }
   .bio-section { flex-direction: column; text-align: center; }
 }
-
 /* CONTACT SECTION */
 .contact-section {
   padding: 2rem;
@@ -238,9 +230,10 @@ body {
 }
 
 .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
 
 .contact-info p {
   margin: 0.5rem 0;
@@ -283,6 +276,3 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
-
-
