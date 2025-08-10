@@ -218,10 +218,11 @@ body {
 }
 /* CONTACT SECTION */
 .contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   padding: 2rem;
-  background-color: var(--card-bg);
-  border-radius: 8px;
-  margin: 2rem;
+  align-items: center;
 }
 
 .contact-section h2 {
@@ -276,5 +277,6 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
