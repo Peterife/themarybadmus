@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mary Badmus — Bio & Works</title>
+  <title>Chimamanda Ngozi Adichie — Bio & Works</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark">
   <div class="page-shell">
 
     <!-- Header -->
     <header class="site-header">
-      <div class="logo">MARY BADMUS</div>
+      <div class="logo">CHIMAMANDA NGOZI ADICHIE</div>
       <nav class="main-nav">
         <ul>
           <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">Bio</a></li>
-          <li><a href="#">Books</a></li>
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#books">Books</a></li>
           <li><a href="#">Media</a></li>
           <li><a href="#">News</a></li>
           <li><a href="#">Contact</a></li>
@@ -26,15 +26,28 @@
       <div class="header-actions">
         <button class="blog-pill">IFEMELU’S BLOG</button>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
       </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
 
     <main class="site-main">
 
       <!-- Bio Section -->
-      <section class="bio-section">
+      <section class="bio-section" id="bio">
         <div class="bio-img">
-          <img src="Mary.jpg" alt="Chimamanda Ngozi Adichie">
+          <img src="https://i.imgur.com/OtG9QeX.jpg" alt="Chimamanda Ngozi Adichie">
         </div>
         <div class="bio-text">
           <h2>Biography</h2>
@@ -49,24 +62,28 @@
       </section>
 
       <!-- Books Section -->
-      <section class="books-section">
+      <section class="books-section" id="books">
         <h2>Books</h2>
         <div class="books-grid">
           <div class="book-card">
             <img src="https://i.imgur.com/1KegWPz.jpg" alt="Dream Count">
             <h3>Dream Count</h3>
+            <p>A captivating novel set to release in March 2025, exploring themes of hope, identity, and destiny.</p>
           </div>
           <div class="book-card">
             <img src="https://i.imgur.com/7Qp5w6h.jpg" alt="Mama’s Sleeping Scarf">
             <h3>Mama’s Sleeping Scarf</h3>
+            <p>A tender children’s story about love, comfort, and the bond between mother and child.</p>
           </div>
           <div class="book-card">
             <img src="https://i.imgur.com/6b7xDgP.jpg" alt="Notes on Grief">
             <h3>Notes on Grief</h3>
+            <p>An intimate reflection on loss and mourning, weaving personal and universal experiences.</p>
           </div>
           <div class="book-card">
             <img src="https://i.imgur.com/7JZfK7v.jpg" alt="Dear Ijeawele">
             <h3>Dear Ijeawele</h3>
+            <p>A powerful feminist manifesto offering practical advice for raising empowered daughters.</p>
           </div>
         </div>
         <div class="center-cta">
@@ -79,7 +96,7 @@
     <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-inner">
-        <p class="site-name">MARY BADMUS</p>
+        <p class="site-name">CHIMAMANDA NGOZI ADICHIE</p>
         <div class="footer-links">
           <a href="#">About</a>
           <a href="#">Books</a>
@@ -90,14 +107,14 @@
           <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter"></a>
           <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
         </div>
-        <small>© 2025 Mary Badmus | All Rights Reserved</small>
+        <small>© 2025 Chimamanda Ngozi Adichie | All Rights Reserved</small>
       </div>
     </footer>
 
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
   </div>
-  <script src="Mary.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
