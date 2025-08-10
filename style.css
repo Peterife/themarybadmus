@@ -115,7 +115,7 @@ body {
 }
 
 .bio-img img {
-  max-width: 100px;
+  max-width: 200px;
   border-radius: 8px;
 }
 
@@ -276,4 +276,5 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
